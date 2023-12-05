@@ -1,9 +1,7 @@
 import Footer from "@/components/footer/Footer";
 import Header from "@/components/header/Header";
-import { Inter } from "next/font/google";
+import { montserrat, roboto } from "./fonts";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Itbank",
@@ -13,7 +11,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${roboto.className} antialiased`}>
         <Header />
         {children}
         <Footer />

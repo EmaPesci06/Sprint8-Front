@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2f3429;
+  padding: 30px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.footer__social {
+  display: flex;
+  font-size: 20px;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+  transition: ease-in 0.2s;
+}
