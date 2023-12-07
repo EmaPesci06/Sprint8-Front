@@ -1,3 +1,5 @@
+import Menu from "@/components/header/Menu";
+
 export const metadata = {
   id: "tarjetas-layout",
   name: "Tarjetas Layout",
@@ -6,5 +8,10 @@ export const metadata = {
 };
 
 export default function Layout({ children }) {
-  return <div className="container">{children}</div>;
+  return (
+    <div className="flex">
+      <Menu />
+      {children}
+    </div>
+  );
 }

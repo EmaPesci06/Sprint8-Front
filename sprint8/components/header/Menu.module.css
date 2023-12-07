@@ -1,6 +1,11 @@
 .menu {
+  background-color: #4c5440;
   display: flex;
   flex-direction: column;
-  height: 516px;
-  flex-basis: 200px;
+  min-height: 516px;
+}
+
+.menu__item:hover {
+  background-color: #20221d;
+  border: inset 1px #b5c71a;
 }

@@ -1,8 +1,15 @@
+import Menu from "@/components/header/Menu";
+
 export const metadata = {
   title: "Itbank | Direcciones",
   description: "Direcciones de los bancos del Itbank",
 };
 
 export default function Layout({ children }) {
-  return <main>{children}</main>;
+  return (
+    <div className="flex">
+      <Menu />
+      {children}
+    </div>
+  );
 }

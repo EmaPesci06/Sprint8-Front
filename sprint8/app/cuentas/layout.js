@@ -1,7 +1,13 @@
+import Menu from "@/components/header/Menu";
 import React from "react";
 
 const Layout = ({ children }) => {
-  return <main>{children}</main>;
+  return (
+    <div className="flex ">
+      <Menu />
+      {children}
+    </div>
+  );
 };
 
 export default Layout;
