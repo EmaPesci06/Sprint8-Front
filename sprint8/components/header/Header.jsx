@@ -1,7 +1,11 @@
 import styles from "./Header.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import {
+  faArrowLeft,
+  faMagnifyingGlass,
+} from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Header() {
   return (
@@ -19,7 +23,12 @@ export default function Header() {
             />
           </button>
         </div>
-        <div className="header__menu"></div>
+        <Link href="/">
+          <FontAwesomeIcon
+            icon={faArrowLeft}
+            className={`${styles.back_icon}`}
+          />
+        </Link>
       </div>
     </header>
   );
