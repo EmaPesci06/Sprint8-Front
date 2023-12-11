@@ -1,4 +1,20 @@
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 export default function Tarjetas() {
+  const [tarjetas, setClients] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('http://localhost:3000/homebanking/tarjetas');
+        setClients(response.data);
+      } catch (error) {
+        console.error('Error fetching direcciones:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
   return (
     <main className="bg-blue-500 text-white p-4 flex flex-col items-center justify-center w-full">
       <h1 className="text-4xl font-bold mb-4">Tarjetas</h1>
